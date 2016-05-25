@@ -11,6 +11,7 @@ server.connection({
 });
 
 console.log('hello');
+console.log(process.env);
 
 server.start((err) => {
   if (err) {
