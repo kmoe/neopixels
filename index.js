@@ -10,8 +10,7 @@ server.connection({
   port: process.env.PORT || 1337
 });
 
-console.log('hello');
-console.log(process.env);
+console.log('initialising');
 
 server.start((err) => {
   if (err) {
