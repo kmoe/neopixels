@@ -42,7 +42,7 @@ const commands = ['red', 'pink', 'white', 'wakeup', 'disco', 'idle'];
 stream.on('data', function(tweet) {
   console.log(tweet.text);
 
-  const tweetText = tweet.text;
+  const tweetText = tweet.text.toLowerCase();
 
   let colour;
 
