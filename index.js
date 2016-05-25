@@ -3,7 +3,7 @@
 const Hapi = require('hapi');
 const Boom = require('boom');
 const server = new Hapi.Server();
-var Twitter = require('twitter');
+const Twitter = require('twitter');
 const request = require('request');
 
 server.connection({
@@ -28,14 +28,14 @@ server.route({
   }
 });
 
-var client = new Twitter({
+const client = new Twitter({
   consumer_key: process.env.CONSUMER_KEY,
   consumer_secret: process.env.CONSUMER_SECRET,
   access_token_key: process.env.ACCESS_TOKEN_KEY,
   access_token_secret: process.env.ACCESS_TOKEN_SECRET
 });
 
-var stream = client.stream('statuses/filter', {track: 'katyemoe'});
+const stream = client.stream('statuses/filter', {track: 'katyemoe'});
 
 const commands = ['red', 'pink', 'white', 'wakeup', 'disco', 'idle'];
 
